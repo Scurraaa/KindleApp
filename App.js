@@ -1,19 +1,12 @@
-import React from 'react';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import homeScreen from './src/screens/homeScreen';
+import readScreen from './src/screens/readScreen';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const app_navigator = createStackNavigator({
+  Home: homeScreen,
+  BookReader: readScreen,
+})
+
+export default createAppContainer(app_navigator);
