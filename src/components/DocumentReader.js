@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Platform } from 'react-native';
 import * as DP from 'expo-document-picker';
 import * as FS from 'expo-file-system';
 
@@ -42,13 +42,13 @@ const styles = StyleSheet.create({
     },
     
     titleText: {
-        fontFamily: 'monospace',
+        fontFamily: Platform.OS === 'ios' ? 'Arial' : 'monospace',
         fontWeight: "bold",
         fontSize: 20,
     },
 
     buttonText: {
-        fontFamily: 'monospace',
+        fontFamily: Platform.OS === 'ios' ? 'Arial' : 'monospace',
         fontSize: 20,
         color: "#fff",
         alignSelf: "center",
