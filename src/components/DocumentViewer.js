@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text } from 'react-native';
+import { ScrollView, StyleSheet, Text, Platform } from 'react-native';
 
 const DocumentViewer = (contents) => {
     return (
@@ -21,15 +21,15 @@ const styles = StyleSheet.create({
 
     titleText: {
         alignSelf: 'center',
-        fontFamily: 'sans-serif-light',
+        fontFamily: Platform.OS === 'ios' ? 'Times New Roman' : 'sans-serif-light',
         fontSize: 35,
         textAlign: 'justify',
         fontWeight: 'bold',
 
     },
     documentText: {
-        fontFamily: 'sans-serif-light',
-        fontSize: 30,
+        fontFamily: Platform.OS === 'ios' ? 'Times New Roman' : 'sans-serif-light',
+        fontSize: 25,
         textAlign: 'justify'
     }
 })
