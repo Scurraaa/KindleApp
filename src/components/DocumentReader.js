@@ -21,7 +21,7 @@ const DocumentReader = ({BookFile}) => {
     return (
         <View>
             <TouchableOpacity style={styles.buttonStyle} onPress={() => picker()}>
-                <Text style={styles.buttonText}>Please Choose a Book to Read</Text>
+                <Text style={styles.buttonText}>Tap here to read a Book</Text>
             </TouchableOpacity>
         </View>
     );
