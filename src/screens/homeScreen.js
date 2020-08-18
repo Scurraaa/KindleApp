@@ -1,12 +1,9 @@
 import React, {useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import AsyncStorage from '@react-native-community/async-storage';
+import { View, Text, StyleSheet } from 'react-native';
 import DocumentReader from '../components/DocumentReader';
 
 
 const homeScreen = ({ navigation }) => {
-    var db = [];
-
     return (
         <>
         <View style={styles.mainContainer}>

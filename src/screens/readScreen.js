@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
 
 import DocumentViewer from '../components/DocumentViewer';
 
