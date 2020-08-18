@@ -3,9 +3,6 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import * as DP from 'expo-document-picker';
 import * as FS from 'expo-file-system';
 
-
-
-
 const DocumentReader = ({BookFile}) => {
     const picker = () => {
         try{
@@ -20,6 +17,9 @@ const DocumentReader = ({BookFile}) => {
     }
     return (
         <View>
+            <View style={styles.titleContainer}>
+                <Text style={styles.titleText}> KINDLE LIKE APP </Text>
+            </View>
             <TouchableOpacity style={styles.buttonStyle} onPress={() => picker()}>
                 <Text style={styles.buttonText}>Tap here to read a Book</Text>
             </TouchableOpacity>
@@ -36,9 +36,20 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal: 12
     },
+    titleContainer: {
+        alignItems: 'center',
+        marginTop: 40,
+    },
+    
+    titleText: {
+        fontFamily: 'monospace',
+        fontWeight: "bold",
+        fontSize: 20,
+    },
+
     buttonText: {
         fontFamily: 'monospace',
-        fontSize: 15,
+        fontSize: 20,
         color: "#fff",
         alignSelf: "center",
         textTransform: "uppercase"

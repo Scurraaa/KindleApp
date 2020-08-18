@@ -14,7 +14,7 @@ const DocumentViewer = (contents) => {
 
 const styles = StyleSheet.create({
     mainContainer: {        
-        paddingVertical: 10,
+        paddingVertical: 15,
         paddingHorizontal: 20,
         justifyContent: 'center',
     },
@@ -22,14 +22,14 @@ const styles = StyleSheet.create({
     titleText: {
         alignSelf: 'center',
         fontFamily: 'sans-serif-light',
-        fontSize: 24,
+        fontSize: 35,
         textAlign: 'justify',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
 
     },
     documentText: {
         fontFamily: 'sans-serif-light',
-        fontSize: 18,
+        fontSize: 30,
         textAlign: 'justify'
     }
 })
